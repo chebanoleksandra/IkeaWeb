@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-image: url("/public/Rectangle\ 15.png");
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+p,
+button,
+a,
+input {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.pageTitle
+{
+    color:rgba(31, 31, 31, 1);
+    font-size: 96px;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 803px;
+    margin: 57px auto;
+}
+
+.searchBar{
+    background-color: rgba(255, 255, 255, 1);
+    width: 1271px;
+    height: 50px;
+    border-radius: 30px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 13px;
+}
+
+.searchButton{
+    border: none;
+    outline: none;
+    background-color:  rgba(255, 255, 255, 1);
+    padding: 0;
+}
+
+.searchImg{
+    width: 18px;
+}
+
+.searchInput
+{
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 14px;
+    width: 1200px;
+    height: 100%;
+}
+
+.hashtag
+{
+    font-size: 20px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+}
+
+.headerText, a
+{
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(95, 95, 95, 1);
+    line-height: 17px;
+    text-transform:capitalize;
+}
+
+a{
+    text-decoration: none;
+}
+
+.createButton
+{
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 1);
+    font-size: 16px;
+    color: rgba(255, 255, 255, 1);
+    width: 377px;
+    height: 60px;
+    border-radius: 30px;
+    padding: 20px 50px;
+    cursor: pointer;
+}
+
+.catalogue
+{
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1);
+    text-transform: uppercase;
+    border: 2px solid rgba(0, 0, 0, 1);
+    border-radius: 30px;
+    padding: 20px 50px;
+    cursor: pointer;
+}
+
+p{
+    color: rgba(0, 0, 0, 1);
+    font-size: 14px;
+    font-weight: 400;
+}
