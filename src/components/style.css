@@ -1,12 +1,13 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
 }
 
-body {
+.main {
     background-image: url("/public/Rectangle\ 15.png");
     background-repeat: no-repeat;
     margin: 0;
+    height: 1080px;
 }
 
 p,
@@ -18,17 +19,14 @@ input {
     font-style: normal;
 }
 
-.pageTitle
-{
-    color:rgba(31, 31, 31, 1);
+.pageTitle {
+    color: rgba(31, 31, 31, 1);
     font-size: 96px;
     font-weight: 600;
     text-transform: uppercase;
-    width: 803px;
-    margin: 57px auto;
 }
 
-.searchBar{
+.searchBar {
     background-color: rgba(255, 255, 255, 1);
     width: 1271px;
     height: 50px;
@@ -40,19 +38,18 @@ input {
     padding-left: 13px;
 }
 
-.searchButton{
+.searchButton {
     border: none;
     outline: none;
-    background-color:  rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 1);
     padding: 0;
 }
 
-.searchImg{
+.searchImg {
     width: 18px;
 }
 
-.searchInput
-{
+.searchInput {
     border: none;
     outline: none;
     font-weight: 500;
@@ -61,28 +58,26 @@ input {
     height: 100%;
 }
 
-.hashtag
-{
+.hashtag {
     font-size: 20px;
     color: rgba(255, 255, 255, 1);
     font-weight: 500;
 }
 
-.headerText, a
-{
+.headerText,
+a {
     font-size: 14px;
     font-weight: 500;
     color: rgba(95, 95, 95, 1);
     line-height: 17px;
-    text-transform:capitalize;
+    text-transform: capitalize;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.createButton
-{
+.createButton {
     text-transform: uppercase;
     background-color: rgba(0, 0, 0, 1);
     font-size: 16px;
@@ -92,10 +87,23 @@ a{
     border-radius: 30px;
     padding: 20px 50px;
     cursor: pointer;
+    font-weight: 600;
 }
 
-.catalogue
-{
+.blackButton {
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 1);
+    font-size: 14px;
+    color: rgba(255, 255, 255, 1);
+    width: 428px;
+    height: 50px;
+    border-radius: 30px;
+    padding: 16px 157px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.borderA {
     font-size: 16px;
     font-weight: 600;
     color: rgba(0, 0, 0, 1);
@@ -106,8 +114,27 @@ a{
     cursor: pointer;
 }
 
-p{
+p {
     color: rgba(0, 0, 0, 1);
     font-size: 14px;
     font-weight: 400;
+}
+
+label {
+    color: rgba(0, 0, 0, 1);
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+}
+
+.input {
+    width: 428px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid rgba(100, 100, 100, 1);
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    display: block;
+    margin-top: 10px;
 }

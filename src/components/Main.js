@@ -1,15 +1,5 @@
 import React from "react";
 import './style.css'
-function Nav(props) {
-    return <div>
-        <ul>
-            <li>menu1</li>
-            <li>menu1</li>
-            <li>menu1</li>
-            <li>menu1</li>
-        </ul>
-    </div>
-}
 
 function ScrollingText() {
     return <div style={{ backgroundColor: "rgba(131, 157, 154, 1)", width: '100%', height: '40px', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -87,16 +77,16 @@ export class MainComponent extends React.Component {
         super(props);
     }
     render() {
-        return <div style={{ magin: '0px' }}>
+        return <div className="main">
             <ScrollingText></ScrollingText>
             <Header></Header>
             <SearchBar></SearchBar>
-            <p className="pageTitle">Все для дому</p>
+            <p className="pageTitle" style={{width: '803px', margin: '57px auto'}}>Все для дому</p>
             <div style={{ width: '640px', marginLeft: '220px'}}>
                 <div style={{display: 'flex', width: '100%', justifyContent: 'space-around'}}><button className="createButton">
                     створити акаунт та почати!
                 </button>
-                    <a className="catalogue">каталог <img src="arrowDown.png" style={{ marginLeft: '10px' }}></img></a></div>
+                    <a className="borderA">каталог <img src="arrowDown.png" style={{ marginLeft: '10px' }}></img></a></div>
                 <div style={{display: 'flex', width: '100%', justifyContent: 'space-between'}}>
                     <TopCard image="pillow.png" title="подушки" category="спальна кімната..." price="12$"></TopCard>
                     <TopCard image="pillow.png" title="подушки" category="спальна кімната..." price="12$"></TopCard>
