@@ -1,4 +1,5 @@
 import React from "react";
+import { Link} from 'react-router-dom';
 import './style.css'
 
 function ScrollingText() {
@@ -22,6 +23,30 @@ function SearchBar() {
     </div>
 }
 
+export function Products()
+{
+    return <div style={{padding: '50px'}}>
+        <h1>Товари</h1>
+        <Link to="/">Повнернутися</Link>
+    </div>
+}
+
+export function Rooms()
+{
+    return <div style={{padding: '50px'}}>
+        <h1>Кімнати</h1>
+        <Link to="/">Повнернутися</Link>
+    </div>
+}
+
+export function Design()
+{
+    return <div style={{padding: '50px'}}>
+        <h1>Дизайн</h1>
+        <Link to="/">Повнернутися</Link>
+    </div>
+}
+
 
 function Header() {
     return <header style={{ width: '1702px', marginLeft: '94px', marginTop: '6px', display: 'flex', justifyContent: 'space-between' }}>
@@ -31,9 +56,9 @@ function Header() {
                 <p className="headerText" style={{ margin: '0 auto', marginTop: '8px' }}>меню</p>
             </a>
             <img src="logo.png" style={{ width: '112px', cursor: "pointer" }}></img>
-            <a href="#" className="headerText">товари</a>
-            <a href="#" className="headerText">кімнати</a>
-            <a href="#" className="headerText">Дизайн</a>
+            <Link to="/products" className="headerText">товари</Link>
+            <Link to="rooms" className="headerText">кімнати</Link>
+            <Link to="design" className="headerText">Дизайн</Link>
 
         </nav>
         <div style={{ width: "484px", display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -43,7 +68,7 @@ function Header() {
             </div>
             <div style={{ width: "252px" }}>
                 <img src="userIcon.png" style={{ width: '20px', display: 'inline-block', marginRight: '12px' }}></img>
-                <p className="headerText" style={{ display: 'inline-block' }}>привіт! <a href="#">увійдіть в систему</a></p>
+                <p className="headerText" style={{ display: 'inline-block' }}><Link to="/login">привіт! увійдіть в систему</Link></p>
             </div>
             <div>
                 <img src="cart.png" style={{ width: '20px', marginRight: '20px', cursor: "pointer" }}></img>
@@ -84,7 +109,7 @@ export class MainComponent extends React.Component {
             <p className="pageTitle" style={{width: '803px', margin: '57px auto'}}>Все для дому</p>
             <div style={{ width: '640px', marginLeft: '220px'}}>
                 <div style={{display: 'flex', width: '100%', justifyContent: 'space-around'}}><button className="createButton">
-                    створити акаунт та почати!
+                    <Link to="/signup" style={{textTransform: 'uppercase', color: 'rgba(255, 255, 255, 1)', fontSize: '16px', fontWeight: '600'}}>створити акаунт та почати!</Link>
                 </button>
                     <a className="borderA">каталог <img src="arrowDown.png" style={{ marginLeft: '10px' }}></img></a></div>
                 <div style={{display: 'flex', width: '100%', justifyContent: 'space-between'}}>

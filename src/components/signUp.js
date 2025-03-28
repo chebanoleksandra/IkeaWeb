@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Link} from 'react-router-dom';
 import './style.css'
 
 export function SignUp() {
@@ -95,7 +96,7 @@ export function SignUp() {
         }
     }
     return <div style={{ display: 'flex', alignItems: 'center'}}>
-        <a href="#"><img src="backIcon.png" style={{ width: '42px', position: 'absolute', top: '40px', left: '40px' }}></img></a>
+        <Link to="/"><img src="backIcon.png" style={{ width: '42px', position: 'absolute', top: '40px', left: '40px' }}></img></Link>
         <img src="signUpBackground.png" style={{ width: '590px', height: '100%' }}></img>
         <div style={{ marginLeft: '156px' }}>
             <form>

@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Link} from 'react-router-dom';
 import './style.css'
 
 export function LogIn() {
@@ -33,7 +34,7 @@ export function LogIn() {
         }
     }
     return <div style={{ display: 'flex' }}>
-        <a href="#"><img src="backIcon.png" style={{ width: '42px', position: 'absolute', top: '40px', left: '40px' }}></img></a>
+        <Link to="/"><img src="backIcon.png" style={{ width: '42px', position: 'absolute', top: '40px', left: '40px' }}></img></Link>
         <div style={{ backgroundImage: 'url("logInBackground.png")', width: '590px', height: '939px' }}>
             <h2 className="pageTitle" style={{ fontSize: '32px', width: '478px', textAlign: "center", margin: '240px auto' }}>
                 заповніть вхід до
@@ -68,7 +69,7 @@ export function LogIn() {
             <p style={{ marginTop: '80px', fontWeight: '600', marginBottom: '37px' }}>
                 У вас ще немає облікового запису? Створіть його:
             </p>
-            <a className="borderA" style={{ width: '428px', height: '50px', padding: '17px 136px' }}>створити аккаунт</a>
+            <Link to="/signup" className="borderA" style={{ width: '428px', height: '50px', padding: '17px 136px' }}>створити аккаунт</Link>
         </div>
     </div>;
 }
