@@ -3,17 +3,10 @@
     margin: 0;
 }
 
-.main {
-    background-image: url("/public/Rectangle\ 15.png");
-    background-repeat: no-repeat;
-    margin: 0;
-    height: 1080px;
-}
-
 p,
 button,
 a,
-input {
+input, h2, h1 {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -136,4 +129,47 @@ label {
     font-size: 16px;
     display: block;
     margin-top: 10px;
+}
+
+h2{
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+section
+{
+    width: 1480px;
+    margin: 90px auto 0 auto;
+}
+
+.arrowIcon
+{
+    height: 40px;
+    width: 40px;
+}
+
+.wrapper
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.smallCardBtn
+{
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #000000;
+    display: flex;
+    background-color: #FFFFFF;
+    width: 161px;
+    height: 40px;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 33px;
 }

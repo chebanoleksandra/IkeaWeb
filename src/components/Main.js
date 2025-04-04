@@ -1,5 +1,5 @@
 import React from "react";
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './style.css'
 
 function ScrollingText() {
@@ -23,25 +23,22 @@ function SearchBar() {
     </div>
 }
 
-export function Products()
-{
-    return <div style={{padding: '50px'}}>
+export function Products() {
+    return <div style={{ padding: '50px' }}>
         <h1>Товари</h1>
         <Link to="/">Повнернутися</Link>
     </div>
 }
 
-export function Rooms()
-{
-    return <div style={{padding: '50px'}}>
+export function Rooms() {
+    return <div style={{ padding: '50px' }}>
         <h1>Кімнати</h1>
         <Link to="/">Повнернутися</Link>
     </div>
 }
 
-export function Design()
-{
-    return <div style={{padding: '50px'}}>
+export function Design() {
+    return <div style={{ padding: '50px' }}>
         <h1>Дизайн</h1>
         <Link to="/">Повнернутися</Link>
     </div>
@@ -97,30 +94,96 @@ class TopCard extends React.Component {
 
 }
 
+function SmallFindCard(props) {
+    return <Link to="/" style={{ display: 'flex', alignItems: 'flex-end', height: '400px', width: `${props.w}px`, backgroundImage: `url(${props.image})`, borderRadius: '15px', marginTop: '20px' }}>
+        <div style={{ width: '100%', height: '80px', backgroundColor: '#B6C3C2', borderBottomLeftRadius: '15px', borderBottomRightRadius: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <p style={{ fontSize: '24px', fontWeight: '500', textTransform: 'uppercase', textAlign: 'center', width: '781px' }}>{props.text}</p>
+            <img src='nextIcon.png' className="arrowIcon" style={{ position: 'relative', top: '0', left: '-20px' }}></img>
+        </div>
+
+    </Link>
+}
+
+function BigFIndCard(props) {
+    return <Link to="/" style={{ display: 'flex', height: '364px', width: '100%', backgroundImage: `url(${props.image})`, borderRadius: '15px', justifyContent: 'flex-end', marginTop: '20px' }}>
+        <div style={{ height: '100%', width: '80px', backgroundColor: '#B6C3C2', borderBottomRightRadius: '15px', borderTopRightRadius: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <img src='nextIcon.png' className="arrowIcon"></img>
+        </div>
+    </Link>
+}
+
+function SmallCard(props) {
+    return <Link to='/' style={{ display: 'flex', height: '286px', width: '219px', marginRight: '20px', marginTop: "20px", borderRadius: '15px', backgroundImage: `url(${props.image})`, justifyContent: 'center', alignItems: 'flex-end', flexShrink: 0 }}>
+        <a href="#" className="smallCardBtn">назва набору</a>
+    </Link>
+}
+
 export class MainComponent extends React.Component {
     constructor(props) {
         super(props);
     }
     render() {
-        return <div className="main">
-            <ScrollingText></ScrollingText>
-            <Header></Header>
-            <SearchBar></SearchBar>
-            <p className="pageTitle" style={{width: '803px', margin: '57px auto'}}>Все для дому</p>
-            <div style={{ width: '640px', marginLeft: '220px'}}>
-                <div style={{display: 'flex', width: '100%', justifyContent: 'space-around'}}><button className="createButton">
-                    <Link to="/signup" style={{textTransform: 'uppercase', color: 'rgba(255, 255, 255, 1)', fontSize: '16px', fontWeight: '600'}}>створити акаунт та почати!</Link>
-                </button>
-                    <a className="borderA">каталог <img src="arrowDown.png" style={{ marginLeft: '10px' }}></img></a></div>
-                <div style={{display: 'flex', width: '100%', justifyContent: 'space-between'}}>
-                    <TopCard image="pillow.png" title="подушки" category="спальна кімната..." price="12$"></TopCard>
-                    <TopCard image="pillow.png" title="подушки" category="спальна кімната..." price="12$"></TopCard>
-                    <TopCard image="pillow.png" title="подушки" category="спальна кімната..." price="12$"></TopCard>
+        return <>
+            <section style={{ height: '1026px', width: '100%', margin: '0', backgroundImage: "url('mainBackground.png')", backgroundRepeat: 'no-repeat' }}>
+                <ScrollingText></ScrollingText>
+                <Header></Header>
+                <SearchBar></SearchBar>
+                <h1 className="pageTitle" style={{ width: '803px', margin: '57px auto' }}>Все для дому</h1>
+                <div style={{ width: '640px', marginLeft: '220px' }}>
+                    <div style={{ display: 'flex', width: '100%', justifyContent: 'space-around' }}><button className="createButton">
+                        <Link to="/signup" style={{ textTransform: 'uppercase', color: 'rgba(255, 255, 255, 1)', fontSize: '16px', fontWeight: '600' }}>створити акаунт та почати!</Link>
+                    </button>
+                        <a className="borderA">каталог <img src="arrowDown.png" style={{ marginLeft: '10px' }}></img></a></div>
+                    <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between' }}>
+                        <TopCard image="pillow.png" title="подушки" category="спальна кімната..." price="12$"></TopCard>
+                        <TopCard image="pillow.png" title="подушки" category="спальна кімната..." price="12$"></TopCard>
+                        <TopCard image="pillow.png" title="подушки" category="спальна кімната..." price="12$"></TopCard>
+                    </div>
+
+                    <p style={{ marginTop: '15px' }}>ЛОВИ МОМЕНТ | <span style={{ fontWeight: '600' }}>Знижки до</span> <span style={{ fontWeight: '900', fontSize: '16px' }}>60%</span> на вибрані категорії товарів!</p>
                 </div>
+            </section>
 
-                <p style={{ marginTop: '15px' }}>ЛОВИ МОМЕНТ | <span style={{ fontWeight: '600' }}>Знижки до</span> <span style={{ fontWeight: '900', fontSize: '16px' }}>60%</span> на вибрані категорії товарів!</p>
+            <section>
+                <h2>
+                    знайди те, що шукаеш!
+                </h2>
+                <div className="wrapper">
+                    <SmallFindCard image="collection1.png" text="наша нова коллекція" w='781'></SmallFindCard>
+                    <SmallFindCard image="collection2.png" text="наші найкращі пропозиції" w='678'></SmallFindCard>
+                    <BigFIndCard image="collection3.png"></BigFIndCard>
+                </div>
+            </section>
+            <section>
+                <h2>рекомаендації</h2>
+                <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+                    <img src='nextIcon.png' className="arrowIcon" style={{ position: 'relative', left: '1461px', cursor: 'pointer' }}></img>
+                    <div style={{ width: '1480px', display: 'flex', alignItems: 'center', marginLeft: '-40px', overflow: 'hidden' }}>
+                        <SmallCard image="recs1.png"></SmallCard>
+                        <SmallCard image="recs2.png"></SmallCard>
+                        <SmallCard image="recs3.png"></SmallCard>
+                        <SmallCard image="recs4.png"></SmallCard>
+                        <SmallCard image="recs5.png"></SmallCard>
+                        <SmallCard image="recs6.png"></SmallCard>
+                        <SmallCard image="recs7.jpg"></SmallCard>
 
-            </div>
-        </div>
+                    </div>
+                </div>
+                <h2 style={{ marginTop: '50px' }}>найкращі набори</h2>
+                <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+                    <img src='nextIcon.png' className="arrowIcon" style={{ position: 'relative', left: '1461px', cursor: 'pointer' }}></img>
+                    <div style={{ width: '1480px', display: 'flex', alignItems: 'center', marginLeft: '-40px', overflow: 'hidden' }}>
+                        <SmallCard image="best1.png"></SmallCard>
+                        <SmallCard image="best2.png"></SmallCard>
+                        <SmallCard image="best3.png"></SmallCard>
+                        <SmallCard image="best4.png"></SmallCard>
+                        <SmallCard image="best5.png"></SmallCard>
+                        <SmallCard image="best6.png"></SmallCard>
+                        <SmallCard image="best7.jpg"></SmallCard>
+
+                    </div>
+                </div>
+            </section>
+        </>
     }
 }
